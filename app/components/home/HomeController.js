@@ -146,6 +146,10 @@
 					$scope.places = response.results;
 					$scope.searchingPlaces = false;
 					_apply();
+				})
+				.catch(function(error) {
+					console.table(error);
+					alert(error);
 				});
 		};
 

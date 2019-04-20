@@ -71,7 +71,7 @@
 			watch: {
 				js: {
 					files: ['Gruntfile.js', 'app/**/*.js'],
-					tasks: ['concat:app', 'jshint'],
+					tasks: ['concat:app'],
 					options: { atBegin: true, liveReload: true }
 				},
 				css: {
@@ -79,10 +79,6 @@
 					tasks: ['cssmin'],
 					options: { atBegin: true, liveReload: true }
 				}
-			},
-
-			jshint: {
-				all: ['Gruntfile.js', 'app/**/*.js']
 			},
 
 			'gh-pages': {

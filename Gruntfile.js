@@ -43,7 +43,9 @@
 					}, {
 						src: ['index.html'], dest: 'deploy/index.html'
 					}, {
-						src: ['app/components/home/home.html'], dest: 'deploy/components/home/home.html'
+						src: ['app/components/home/home.html'], dest: 'deploy/app/components/home/home.html'
+					}, {
+						src: ['img/close.gif'], dest: 'deploy/img/close.gif'
 					}]
 				}
 			},
@@ -83,7 +85,8 @@
 
 			'gh-pages': {
 		    options: {
-		      base: 'deploy'
+		      base: 'deploy',
+					message: 'Deploy'
 		    },
 		    src: ['**']
 		  },
@@ -97,7 +100,7 @@
 		grunt.task.run('notify_hooks');
 
 		grunt.registerTask('default', ['concat',  'cssmin', 'copy:assets']);
-		grunt.registerTask('deploy', ['default',  'uglify', 'copy:deploy', 'gh-pages']);
+		grunt.registerTask('deploy', ['default', 'copy:deploy', 'gh-pages']);
 
 		require('time-grunt')(grunt);
 		require('jit-grunt')(grunt);

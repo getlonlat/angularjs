@@ -2,6 +2,8 @@
 Thumbs.db
 *sublime*
 
+.idea/
+
 bower_components/*
 node_modules/*
 

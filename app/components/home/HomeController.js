@@ -27,7 +27,7 @@
 			$scope.startLonlat = { lon: 0, lat: 0 };
 			$scope.showLatLon = true;
 
-			$scope.baselayer  = 0;
+			$scope.baselayer  = 1;
 			$scope.separator  = 'comma';
 			$scope.projection = 'EPSG:4326';
 			$scope.defaultProjection = 'EPSG:4326';
@@ -37,6 +37,7 @@
 				startZoom: $scope.zoom,
 				startLonlat: $scope.startLonlat
 			});
+			Map.setBaseLayer($scope.baselayer);
 
 			Map.getActualZoom(function(zoom) {
 				$scope.zoom = zoom;

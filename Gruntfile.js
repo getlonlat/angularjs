@@ -7,14 +7,12 @@
 				app: {
 					dest: 'build/js/app.min.js',
 					src: [
-						'bower_components/jquery/dist/jquery.js',
-						'bower_components/bootstrap/dist/js/bootstrap.js',
-						'bower_components/angular/angular.js',
-						'bower_components/angular-route/angular-route.js',
-						'bower_components/angular-geohash/dist/angular-geohash.min.js',
-						'bower_components/angular-clipboard/angular-clipboard.js',
-						'bower_components/angular-toastr/dist/angular-toastr.min.js',
-						'bower_components/angular-toastr/dist/angular-toastr.tpls.min.js',
+						'node_modules/angular/angular.js',
+						'node_modules/angular-route/angular-route.js',
+						'node_modules/angular-geohash/dist/angular-geohash.min.js',
+						'node_modules/angular-clipboard/angular-clipboard.js',
+						'node_modules/angular-toastr/dist/angular-toastr.min.js',
+						'node_modules/angular-toastr/dist/angular-toastr.tpls.min.js',
 
 						'app/app.js',
 						'app/config.js',
@@ -36,7 +34,7 @@
 						src: ['js/**.*'], dest: 'build/js'
 					}, {
 						expand: true, flatten: true,
-						src: ['bower_components/font-awesome/fonts/**.*'], dest: 'build/fonts'
+						src: ['node_modules/font-awesome/fonts/**.*'], dest: 'build/fonts'
 					}]
 				},
 				deploy: {
@@ -62,8 +60,8 @@
 					files: {
 						'build/css/app.min.css': [
 							'css/bootstrap-paper.min.css',
-							'bower_components/font-awesome/css/font-awesome.css',
-							'bower_components/angular-toastr/dist/angular-toastr.min.css',
+							'node_modules/font-awesome/css/font-awesome.css',
+							'node_modules/angular-toastr/dist/angular-toastr.min.css',
 							'css/app.css',
 						]
 					}
